@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="jumbo">
+    <h2>Welcome to the Flask app<h2>
+    <h3>Control the Relay<h3>
+  </div>
+  
+  <div class="conntroller_relay">
+	<div class="channel_one">
+	  <a href="/relay_on/1">
+	    <section>C1 ON</section>	
+	  </a>
+      <a href="/relay_off/1">
+	    <section>C1 OFF</section>	
+	  </a>
+	</div>
+
+	<div class="channel_two">
+	  <a href="/relay_on/2">
+	    <section>C2 ON</section>	
+	  </a>
+      <a href="/relay_off/2">
+	    <section>C2 OFF</section>	
+	  </a>
+	</div>
+  </div>
+{% endblock %}
