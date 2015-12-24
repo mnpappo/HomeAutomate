@@ -24,4 +24,24 @@
 	  </a>
 	</div>
   </div>
+
+<br>
+
+  <div>
+	<table class="logs">
+	  <h2>Relay logs</h2>
+      <tr>
+        <th>#ID</th>
+        <th>Status/Comment</th>
+        <th>DateTime</th>
+	  </tr>
+      {%- for log in logs %}
+	  <tr class="items">
+		<td>{{ log.id }}</td>
+		<td>{{ log.comment }}</td>
+		<td>{{ log.logtime.strftime('%Y-%m-%d %H:%M') }}</td>
+	  </tr>
+	  {%- endfor %}
+    </table>
+  </div>
 {% endblock %}

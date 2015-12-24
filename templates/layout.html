@@ -9,6 +9,15 @@
     <header>
       <div class="container">
         <h1 class="logo">My Pi App</h1>
+		{% with messages = get_flashed_messages(with_categories=true) %}
+		  {% if messages %}
+			<ul class="flashes">
+			{% for category, message in messages %}
+			  <li class="{{ category }}">{{ message }}</li>
+			{% endfor %}
+			</ul>
+		  {% endif %}
+		{% endwith %}
       </div>
 	  
     </header> 
