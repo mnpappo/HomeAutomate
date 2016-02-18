@@ -1,4 +1,4 @@
-#Home Security
+#HomeAutomate
 
 IOTize your world. Get notified about every events of your life. This device's idea is to connect every electronic-device of your life you use every day with a network, where you can manage them efficiently & smartly. This could save your power usage & other resources. 
 
