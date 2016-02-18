@@ -1,6 +1,6 @@
 #Home Security is Home automation device build with Raspbery PI 2 B
 
-*Adviser:
+*Adviser*:
 Protap Kumar Mahanta
 Lecturer, Dept. of ETE at University of Liberal Arts Bangladesh (ULAB)
 
