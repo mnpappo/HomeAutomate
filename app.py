@@ -87,21 +87,21 @@ def relay_on(channel):
 def relay_off(channel):
     GPIO.setmode(GPIO.BCM)
     try:
-		if(channel=='1'):
-			GPIO.output(2, 0)
-			GPIO.output(3, 0)
-			db.session.add(Log("Both Channel LOW"))
-			db.session.commit()
-			logs = Log.query.order_by(Log.logtime.desc()).all()
-			return render_template('relay.html', logs=logs)
-		elif(channel=='2'):
-			GPIO.output(2, 0)
-			GPIO.output(3, 0)
-			db.session.add(Log("Both Channel LOW"))
-			db.session.commit()
-			logs = Log.query.order_by(Log.logtime.desc()).all()
-			return render_template('relay.html', logs=logs)
-		print("OFF Process complete. Good bye!")
+	if(channel == '1'):
+		GPIO.output(2, 0)
+		GPIO.output(3, 0)
+		db.session.add(Log("Both Channel LOW"))
+		db.session.commit()
+		logs = Log.query.order_by(Log.logtime.desc()).all()
+		return render_template('relay.html', logs=logs)
+	elif(channel=='2'):
+		GPIO.output(2, 0)
+		GPIO.output(3, 0)
+		db.session.add(Log("Both Channel LOW"))
+		db.session.commit()
+		logs = Log.query.order_by(Log.logtime.desc()).all()
+		return render_template('relay.html', logs=logs)
+	print("OFF Process complete. Good bye!")
     except KeyboardInterrupt:
         print("  Quit")
         # Reset GPIO settings
