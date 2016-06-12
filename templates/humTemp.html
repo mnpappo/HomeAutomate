@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="jumbo">
+    <h2>Smartly manage your devices and go Green<h2>
+    <h3>Get instant Humidity & Temperaure <h3>
+  </div>
+
+  <h2><a href="/getHumTemp">Reload</a></h2>
+  
+  <div class="conntroller container text-warning">
+        <h1>Humidity is {{hum}} %</h1>
+	<h1>Temperature is {{temp}} C</h1>
+  </div>
+
+  
+                
+{% endblock %}
+

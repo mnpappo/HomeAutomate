@@ -2,13 +2,19 @@
 <html>
   <head>
     <title>My Pi App</title>    
+	
+	<!--
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}" />
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+	
   </head>
   <body>
-   
+
     <header>
       <div class="container">
-        <h1 class="logo">My Pi App</h1>
+        <h1 class="logo">Smart Energy Saver</h1>
 		{% with messages = get_flashed_messages(with_categories=true) %}
 		  {% if messages %}
 			<ul class="flashes">
@@ -22,19 +28,48 @@
 	  
     </header> 
 	
-	<div class="header container">
-		<nav>
-			<ul>
-			  <li><a href="/">Home/LED Controller</a></li>
-			  <li><a href="/relay/">Relay Controller</a></li>
-			</ul>
-		</nav>
-	</div>
-     
-    <div class="container">
+	<div class="header conainer">
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Lights</a></li>
+	<li><a href="/relay">Circuit/ Relay Board</a></li>
+	<li><a href="/getHumTemp">Humidity & Temperature</a></li>
+	<li><a href="/ldr">Light Detect</a></li>
+	<li><a href="/gasDetect">Gas Detect</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/profile">Your Profile</a></li>
+      </ul>
+   
+    </div>
+  </div>
+</nav>
+
+
+    
+    <div class="container col-sm-12">
       {% block content %}
       {% endblock %}
     </div>
-     
+    
+    <footer>
+	<div class="well well-sm">Developed by - Furious_Five</div>
+    </footer>    
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </body>
 </html>

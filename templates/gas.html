@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="jumbo">
+    <h2>Smartly manage your devices and go Green<h2>
+    <h3>Gas detecor <h3>
+  </div>
+
+  <h2><a href="/gasDetect">Reload</a></h2>
+  
+  <div class="conntroller">
+	<h1>{{ gas }}</h1>
+        <h1>{% if not gas %} Gas detected! {% else %} Gas not detected {% endif %}</h1>
+  </div>
+
+  
+                
+{% endblock %}
